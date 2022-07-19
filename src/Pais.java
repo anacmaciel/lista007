@@ -11,6 +11,26 @@ public class Pais       {
           this.dimensao= dimensao;
      }
 
+
+
+
+     public void adicionarPaiscomFronteira(Pais p) {
+          listaDePaisesComFronteira.add(p);
+     }
+
+     public void fazFronteira(Pais p) {
+          if (listaDePaisesComFronteira.contains(p.getNome())) {
+               System.out.println(p.getNome() + " faz fronteira com " + this.getNome());
+
+          } else {
+               System.out.println(p.getNome() + " não faz fronteira com " + this.getNome());
+          }
+     }
+
+     public  double calcularDencidade() {
+          return  populacao / dimensao;
+     }
+
      public String getCodigoIso() {
                     return codigoIso;
      }
@@ -42,23 +62,6 @@ public class Pais       {
      public void setDimensao(double dimensao) {
           this.dimensao = dimensao;
      }
-
-     public void adicionarPaiscomFronteira(Pais p) {
-          listaDePaisesComFronteira.add(p);
-     }
-
-     public void fazFronteira(Pais p) {
-          if (listaDePaisesComFronteira.contains(p.getNome())) {
-               System.out.println(p.getNome() + " faz fronteira com " + this.getNome());
-
-          } else {
-               System.out.println(p.getNome() + " não faz fronteira com " + this.getNome());
-          }
-     }
-
-          public  double calcularDencidade() {
-               return  populacao / dimensao;
-          }
 
 }
 

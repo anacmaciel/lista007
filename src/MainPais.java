@@ -1,18 +1,12 @@
-
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainPais {
-    public static void listarPaises(Pais p) {
-        for(int i = 0; i < listaDePaisesComFronteira.size(); i++) {
 
-
-
-        }
-
-    public static void main(String[] args) {
 
       public static void main(String[] args) {
+
+        List <Pais> listaDePaisesComFronteira = new ArrayList<>();
         Pais brasil = new Pais("BRA", "Brasil", 10000, 5000.0);
         Pais estadosUnidos = new Pais("USA", "Estados Unidos da América", 8000, 4000.0);
 
@@ -20,19 +14,10 @@ public class MainPais {
 
         Pais canada = new Pais("CA", "Canadá", 6000, 2000.0);
 
-        Set<Pais> listaDePaisesComFronteira = new HashSet<Pais>();
+estadosUnidos.adicionarPaiscomFronteira(estadosUnidos);
 
 
-        estadosUnidos.adicionarPaiscomFronteira(mexico);
 
-        estadosUnidos.adicionarPaiscomFronteira(canada);
-
-        mexico.adicionarPaiscomFronteira(estadosUnidos);
-        mexico.adicionarPaiscomFronteira(canada);
-
-        canada.adicionarPaiscomFronteira(estadosUnidos);
-        canada.adicionarPaiscomFronteira(mexico);
-        }
 
 
     }
