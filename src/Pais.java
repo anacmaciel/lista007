@@ -1,16 +1,8 @@
-import java.util.HashSet;
-import java.util.Set;
-
 public class Pais       {
      private String codigoIso;
      private  String nome;
      private int populacao;
      private double dimensao;
-     Set<Pais> listaDePaisesComFronteira = new HashSet<Pais>();
-
-     public Set<Pais> getListaDePaisesComFronteira() {
-          return listaDePaisesComFronteira;
-     }
 
      public Pais(String codigoIso, String nome, int populacao, double dimensao) {
           this.codigoIso = codigoIso;
