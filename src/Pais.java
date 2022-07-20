@@ -1,8 +1,15 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Pais       {
      private String codigoIso;
      private  String nome;
      private int populacao;
      private double dimensao;
+List <Pais> listaDePaisesComFronteira = new ArrayList<>();
+
+     Scanner input = new Scanner();
+
 
      public Pais(String codigoIso, String nome, int populacao, double dimensao) {
           this.codigoIso = codigoIso;
@@ -15,7 +22,20 @@ public class Pais       {
 
 
      public void adicionarPaiscomFronteira(Pais p) {
-          listaDePaisesComFronteira.add(p);
+          System.out.println("digite um país e tecle enter");
+          String nome = input.next();
+          System.out.println("Digite o código ISO do país");
+          String codigoIso = input.next();
+
+          System.out.println("Digite a população do país");
+          int populacao = input.nextInt();
+          System.out.println("Digite a dimensão do país");
+          double dimensao = input.nextDouble();
+          System.out.println("Dados inseridos com sucesso!");
+
+          Pais novoPais = new Pais(nome, codigoIso, populacao, dimensao);
+          listaDePaisesComFronteira.add(novoPais);
+
      }
 
      public void fazFronteira(Pais p) {
@@ -27,9 +47,17 @@ public class Pais       {
           }
      }
 
+     public void exibirLista() {
+          for (int i = 0; i < listaDePaisesComFronteira.size(); i ++) {
+               System.out.println("Nome do país: " + listaDePaisesComFronteira.get(i).getNome() + " código ISO: " + listaDePaisesComFronteira.get(i).getCodigoIso() + " população: " + listaDePaisesComFronteira.get(i).getPopulacao() + " dimensão: " + listaDePaisesComFronteira.get(i).getDimensao());
+          }
+     }
+
      public  double calcularDencidade() {
           return  populacao / dimensao;
      }
+
+
 
      public String getCodigoIso() {
                     return codigoIso;

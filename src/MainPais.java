@@ -1,20 +1,11 @@
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainPais {
 
 
       public static void main(String[] args) {
+Pais pais = new Pais();
+pais.adicionarPaiscomFronteira();
 
-        List <Pais> listaDePaisesComFronteira = new ArrayList<>();
-        Pais brasil = new Pais("BRA", "Brasil", 10000, 5000.0);
-        Pais estadosUnidos = new Pais("USA", "Estados Unidos da América", 8000, 4000.0);
-
-        Pais mexico = new Pais("MX", "México",  7000, 3000.0);
-
-        Pais canada = new Pais("CA", "Canadá", 6000, 2000.0);
-
-estadosUnidos.adicionarPaiscomFronteira(estadosUnidos);
 
 
 
