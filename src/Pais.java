@@ -17,20 +17,8 @@ public class Pais       {
           this.dimensao = dimensao;
      }
 
-     public void adicionarPaiscomFronteira() {
-          Scanner input = new Scanner(System.in);
-          System.out.println("Digite o código ISO do país");
-          String codigoIso = input.next();
-          System.out.println("digite um país e tecle enter");
-          String nome = input.next();
-          System.out.println("Digite a população do país");
-          int populacao = input.nextInt();
-          System.out.println("Digite a dimensão do país");
-          double dimensao = input.nextDouble();
-          System.out.println("Dados inseridos com sucesso!");
-
-          Pais novoPais = new Pais(codigoIso, nome, populacao, dimensao);
-          listaDePaisesComFronteira.add(novoPais);
+     public void adicionarPaiscomFronteira(Pais pais) {
+          listaDePaisesComFronteira.add(pais);
      }
 
      public void fazFronteira(Pais p) {
