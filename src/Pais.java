@@ -17,10 +17,6 @@ public class Pais       {
           this.dimensao = dimensao;
      }
 
-     public Pais() {
-     }
-
-
      public void adicionarPaiscomFronteira() {
           Scanner input = new Scanner(System.in);
           System.out.println("Digite o código ISO do país");

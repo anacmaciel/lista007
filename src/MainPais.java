@@ -4,7 +4,7 @@ public class MainPais {
 
     public static void menu() {
         System.out.println("1. Para adicionar um país a lista de países vizinhos");
-        System.out.println("2. Para ver se o país está na lista de países vizinhos");
+        System.out.println("2. Para confirmar se o país é vizinho do país digitado.");
         System.out.println("3. Para exibir a lista de países");
         System.out.println("4. Para sair");
     }
@@ -12,21 +12,23 @@ public class MainPais {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Digite a opção desejada");
-        menu();
-        boolean sair;
-        Pais pais = new Pais();
-        while (sair = true) {
+        boolean executar = true;
+        Pais paisA = new Pais("bra", "brasil", 10000, 5000);
+        Pais paisB = new Pais("mx", "méxico", 9000, 4000);
+        Pais paisC = new Pais("USA", "Estados unidos", 8000, 3000);
+        while (executar) {
+            menu();
             int opcaoUsuario = scan.nextInt();
             switch (opcaoUsuario) {
                 case 1:
-                    pais.adicionarPaiscomFronteira();
+                    paisB.adicionarPaiscomFronteira();
                     break;
                 case 2:
-                    pais.fazFronteira();
+                    paisB.fazFronteira(paisA);
                 case 3:
-                    pais.exibirLista();
+                    paisB.exibirLista();
                 case 4:
-                    sair = false;
+                    executar = false;
                     System.out.println("Fim do programa");
                 default:
                     System.out.println("Opção inválida");
